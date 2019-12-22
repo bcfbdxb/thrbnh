@@ -1,0 +1,70 @@
+package com;
+
+public class Lader {
+float above;
+float bottom;
+float height;
+float area;
+Lader(){
+}
+Lader(float a,float b,float c){
+	above=a;
+	bottom=b;
+	height=c;
+}
+float computerarea() {
+	area=(above+bottom)*height/2.0f;
+	return area;
+}
+void setHeight(float h) {
+	height = h;
+	System.out.println(height);
+}
+public static void main(String[] args) {
+	float a=5;
+	float b=4;
+	float h=2;
+	Lader c=new Lader(a,b,h);
+	c.setHeight(h);
+	
+	float v=c.computerarea();
+	System.out.println(v);
+}
+}
+package com;
+
+public class exmple {
+public static void main(String[] args) {
+	xiyouji a=new xiyouji();
+	xiyouji b=new xiyouji();
+	a.ear="大耳朵";
+	a.height =177;
+	a.weight =178.6f;
+    a.head="秀发飘飘";
+    b.head="圈发";
+    a=b;
+    a.speak("我要回高老庄娶媳妇");
+    b.head="圈发";
+	System.out.println("猪八戒身高是"+a.height+"体重是"+a.weight +"耳朵是"+a.ear +"猪八戒的头"+a.head);
+	sanjiao e=new sanjiao(3,7);
+	float area=e.getarea();
+	System.out.println(area);
+	Battery nanfu=new Battery(100);
+	int f=nanfu.elactricityAmount;
+	Radio co=new Radio();
+	System.out.println(nanfu.elactricityAmount);
+	co.openRadio(nanfu);
+	
+	System.out.println(nanfu.elactricityAmount);
+}
+}
+package com;
+
+public class xiyouji {
+float height,weight;
+String ear,head;
+void speak(String s) {
+	head="歪着头";
+	System.out.println(s);
+}
+}
